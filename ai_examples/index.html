@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Registration System</h1>
+
+    <!-- Message Area -->
+    <div id="message"></div>
+
+    <!-- Student Form -->
+    <form id="studentForm">
+
+        <div class="form-group">
+            <label>Student ID</label>
+            <input
+                type="text"
+                id="studentId"
+                placeholder="Enter Student ID"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Student Name</label>
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter Student Name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input
+                type="number"
+                id="studentAge"
+                placeholder="Enter Age"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Course</label>
+            <input
+                type="text"
+                id="studentCourse"
+                placeholder="Enter Course"
+                required
+            >
+        </div>
+
+        <button type="submit">
+            Register Student
+        </button>
+
+    </form>
+
+    <!-- Controls -->
+    <div class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search students..."
+            onkeyup="searchStudents()"
+        >
+
+        <button onclick="sortStudents()">
+            Sort By Name
+        </button>
+
+        <button onclick="exportCSV()">
+            Export CSV
+        </button>
+
+    </div>
+
+    <!-- Student Table -->
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Statistics -->
+    <div id="stats">
+
+        <h3>Statistics</h3>
+
+        <p>Total Students: 0</p>
+
+        <p>Average Age: 0</p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html> 
